@@ -1,19 +1,17 @@
 import hashlib
 import hmac
 import json
-import os
 from datetime import datetime, timezone
-
 import urllib.request
 
 SIGNING_SECRET = "hello-there-from-b12"
 ENDPOINT = "https://b12.io/apply/submission"
 
 payload = {
-    "action_run_link": "https://github.com/wachira7/b12-application/actions/runs/YOUR_RUN_ID",
+    "action_run_link": "https://github.com/wachira7/github-actions-post/actions/runs/24109231295",
     "email": "waruterewachira7@gmail.com",
     "name": "Emmanuel Warutere Wachira",
-    "repository_link": "https://github.com/wachira7/b12-application",
+    "repository_link": "https://github.com/wachira7/github-actions-post",
     "resume_link": "https://linkedin.com/in/emmanuelwaruts77",
     "timestamp": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.") + 
                  f"{datetime.now(timezone.utc).microsecond // 1000:03d}Z"
